@@ -1,0 +1,16 @@
+﻿@inherits LayoutComponentBase
+
+<main class="@darkMode">
+    <Header OnToggleDarkMode=@UpdateDarkMode/>
+    <body> 
+        @Body 
+    </body>
+</main>
+
+@code {
+    private string darkMode = "dark";
+
+    private void UpdateDarkMode(string value) {
+        darkMode = value;
+    }
+}
